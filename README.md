@@ -28,15 +28,13 @@ Bilingual (English / Persian) personal portfolio for **Morteza Kamalian** — a 
 
 ## Screenshots
 
-> Add screenshots to `docs/screenshots/` and update the paths below before publishing.
-
 | Home | About |
 |------|-------|
-| _Coming soon_ | _Coming soon_ |
+| ![Home page](docs/screenshots/home-en.png) | ![About page](docs/screenshots/about-en.png) |
 
 | Projects | Admin |
 |----------|-------|
-| _Coming soon_ | _Coming soon_ |
+| ![Projects page](docs/screenshots/projects-en.png) | ![Django admin](docs/screenshots/admin.png) |
 
 ---
 
@@ -367,6 +365,18 @@ POST /api/v1/contact/
 ```
 
 جزئیات کامل در بخش انگلیسی بالا آمده است.
+
+---
+
+## اسکرین‌شات‌ها
+
+| خانه | درباره من |
+|------|-----------|
+| ![صفحه خانه](docs/screenshots/home-en.png) | ![صفحه درباره من](docs/screenshots/about-en.png) |
+
+| پروژه‌ها | ادمین |
+|---------|--------|
+| ![صفحه پروژه‌ها](docs/screenshots/projects-en.png) | ![پنل ادمین](docs/screenshots/admin.png) |
 
 ---
 

@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "siteName": "Morteza Kamalian",
+    "defaultTitle": "Morteza Kamalian | Backend-Focused Full-Stack Developer",
+    "defaultDescription": "Portfolio of Morteza Kamalian — Django, DRF, Next.js, PostgreSQL, Docker, and scalable web systems. Open to remote opportunities."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact",
+    "hireMe": "Hire Me",
+    "mainNav": "Main navigation",
+    "homeLink": "kamalian.dev — Home"
+  },
+  "home": {
+    "greeting": "Hi, I'm",
+    "name": "Morteza Kamalian",
+    "role": "Backend-Focused Full-Stack Developer",
+    "tagline": "I build scalable APIs and modern web experiences with Django, DRF, and Next.js.",
+    "ctaProjects": "View Projects",
+    "ctaContact": "Get in Touch",
+    "availability": "Open to remote opportunities",
+    "featuredTitle": "Featured Projects",
+    "featuredSubtitle": "Selected work across backend systems, APIs, and full-stack products.",
+    "featuredEmpty": "Featured projects will appear here once marked in the admin panel.",
+    "activityTitle": "Summary of My Work",
+    "activityBody": "I design and deliver full-stack products with a strong backend-first mindset. My focus is clean architecture, stable APIs, and measurable performance from database to UI.",
+    "activityPlaceholder": "Architecture · APIs · Performance · Product Thinking",
+    "skillsTitle": "Core Stack",
+    "latestTitle": "Latest Articles",
+    "latestSubtitle": "Notes on backend systems, APIs, and full-stack development.",
+    "viewAllBlog": "View all articles"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Engineer focused on reliable backend systems and polished user experiences.",
+    "metaTitle": "About",
+    "metaDescription": "Learn more about Morteza Kamalian — backend-focused full-stack developer specializing in Django, DRF, Next.js, and Docker.",
+    "badge": "About Me",
+    "fallbackName": "Morteza Kamalian",
+    "fallbackTitle": "Backend-Focused Full-Stack Developer",
+    "storyTitle": "My Story",
+    "highlightsTitle": "Core Focus",
+    "experienceTitle": "Work Experience",
+    "educationTitle": "Education",
+    "certificationsTitle": "Certifications & SEO",
+    "present": "Present",
+    "featuredCert": "Featured",
+    "viewCredential": "View credential",
+    "ctaTitle": "Let's build something solid",
+    "ctaBody": "Open to remote roles, backend projects, and long-term product collaboration.",
+    "ctaButton": "Get in Touch",
+    "ctaProjects": "View Projects"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Case studies and products I've built or contributed to.",
+    "metaTitle": "Projects",
+    "metaDescription": "Portfolio projects by Morteza Kamalian — Django, DRF, Next.js, PostgreSQL, Docker, and production-ready web systems.",
+    "viewProject": "View Details",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code",
+    "techStack": "Tech Stack",
+    "empty": "Projects will appear here once added from the admin panel."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Notes on backend systems, APIs, deployment, and full-stack development.",
+    "metaTitle": "Blog",
+    "metaDescription": "Technical articles by Morteza Kamalian on Django, DRF, Next.js, Docker, and scalable web systems.",
+    "article": "Article",
+    "readMore": "Read article",
+    "backToList": "More articles are on the blog index.",
+    "empty": "Articles will appear here once published from the admin panel."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project or remote role in mind? Send a message.",
+    "metaTitle": "Contact",
+    "metaDescription": "Get in touch with Morteza Kamalian for remote opportunities, backend projects, and full-stack collaboration.",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully. I'll get back to you soon.",
+    "error": "Something went wrong. Please try again.",
+    "alternativesTitle": "Other ways to reach me",
+    "alternativesSubtitle": "Prefer email or a direct link? Use any of the options below.",
+    "emailLabel": "Email",
+    "githubLabel": "GitHub",
+    "linkedinLabel": "LinkedIn"
+  },
+  "footer": {
+    "builtWith": "Built with Django REST Framework & Next.js",
+    "rights": "All rights reserved.",
+    "connect": "Connect"
+  },
+  "language": {
+    "en": "English",
+    "fa": "فارسی",
+    "switcher": "Language",
+    "enShort": "EN",
+    "faShort": "FA"
+  },
+  "theme": {
+    "label": "Theme",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "closeOverlay": "Close menu overlay",
+    "menuDialog": "Mobile navigation"
+  },
+  "errors": {
+    "notFoundTitle": "Page not found",
+    "notFoundDescription": "The page you're looking for doesn't exist or may have been moved.",
+    "notFoundCta": "Back to home",
+    "errorTitle": "Something went wrong",
+    "errorDescription": "An unexpected error occurred. Please try again.",
+    "errorRetry": "Try again",
+    "loading": "Loading..."
+  },
+  "common": {
+    "proficiency": "Proficiency"
+  }
+}

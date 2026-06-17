@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "siteName": "مرتضی کمالیان",
+    "defaultTitle": "مرتضی کمالیان | توسعه‌دهنده فول‌استک با تمرکز بر بک‌اند",
+    "defaultDescription": "پورتفولیو مرتضی کمالیان — Django، DRF، Next.js، PostgreSQL، Docker و سیستم‌های مقیاس‌پذیر. آماده همکاری ریموت."
+  },
+  "nav": {
+    "home": "خانه",
+    "about": "درباره من",
+    "projects": "پروژه‌ها",
+    "blog": "بلاگ",
+    "contact": "تماس",
+    "hireMe": "همکاری",
+    "mainNav": "ناوبری اصلی",
+    "homeLink": "kamalian.dev — خانه"
+  },
+  "home": {
+    "greeting": "سلام، من",
+    "name": "مرتضی کمالیان",
+    "role": "توسعه‌دهنده فول‌استک با تمرکز بر بک‌اند",
+    "tagline": "APIهای مقیاس‌پذیر و تجربه‌های وب مدرن با Django، DRF و Next.js می‌سازم.",
+    "ctaProjects": "مشاهده پروژه‌ها",
+    "ctaContact": "ارتباط با من",
+    "availability": "آماده فرصت‌های کاری ریموت",
+    "featuredTitle": "پروژه‌های برجسته",
+    "featuredSubtitle": "نمونه‌کارهایی از بک‌اند، API و محصولات فول‌استک.",
+    "featuredEmpty": "پس از علامت‌گذاری پروژه‌ها به‌عنوان برجسته در ادمین، اینجا نمایش داده می‌شوند.",
+    "activityTitle": "خلاصه فعالیت‌های من",
+    "activityBody": "تمرکز اصلی من ساخت محصولات فول‌استک با نگاه بک‌اند‌محور است؛ از طراحی معماری و APIهای پایدار تا بهینه‌سازی عملکرد و تجربه کاربری حرفه‌ای.",
+    "activityPlaceholder": "معماری · API · عملکرد · نگاه محصولی",
+    "skillsTitle": "تکنولوژی‌های اصلی",
+    "latestTitle": "آخرین مقالات",
+    "latestSubtitle": "یادداشت‌هایی درباره بک‌اند، API و توسعه فول‌استک.",
+    "viewAllBlog": "مشاهده همه مقالات"
+  },
+  "about": {
+    "title": "درباره من",
+    "subtitle": "مهندس نرم‌افزار با تمرکز بر سیستم‌های پایدار و تجربه کاربری حرفه‌ای.",
+    "metaTitle": "درباره من",
+    "metaDescription": "بیشتر درباره مرتضی کمالیان — توسعه‌دهنده فول‌استک با تمرکز بر Django، DRF، Next.js و Docker.",
+    "badge": "درباره من",
+    "fallbackName": "مرتضی کمالیان",
+    "fallbackTitle": "توسعه‌دهنده فول‌استک با تمرکز بر بک‌اند",
+    "storyTitle": "داستان من",
+    "highlightsTitle": "تمرکزهای اصلی",
+    "experienceTitle": "سوابق کاری",
+    "educationTitle": "تحصیلات",
+    "certificationsTitle": "گواهینامه‌ها و SEO",
+    "present": "اکنون",
+    "featuredCert": "ویژه",
+    "viewCredential": "مشاهده گواهینامه",
+    "ctaTitle": "بیایید چیزی پایدار بسازیم",
+    "ctaBody": "آماده همکاری ریموت، پروژه‌های بک‌اند و مشارکت بلندمدت در محصول هستم.",
+    "ctaButton": "ارتباط با من",
+    "ctaProjects": "مشاهده پروژه‌ها"
+  },
+  "projects": {
+    "title": "پروژه‌ها",
+    "subtitle": "مطالعات موردی و محصولاتی که روی آن‌ها کار کرده‌ام.",
+    "metaTitle": "پروژه‌ها",
+    "metaDescription": "پروژه‌های پورتفولیو مرتضی کمالیان — Django، DRF، Next.js، PostgreSQL، Docker و سیستم‌های production-ready.",
+    "viewProject": "جزئیات",
+    "liveDemo": "نسخه زنده",
+    "sourceCode": "سورس کد",
+    "techStack": "تکنولوژی‌ها",
+    "empty": "پس از افزودن پروژه‌ها از پنل ادمین، اینجا نمایش داده می‌شوند."
+  },
+  "blog": {
+    "title": "بلاگ",
+    "subtitle": "یادداشت‌هایی درباره بک‌اند، API، استقرار و توسعه فول‌استک.",
+    "metaTitle": "بلاگ",
+    "metaDescription": "مقالات فنی مرتضی کمالیان درباره Django، DRF، Next.js، Docker و سیستم‌های مقیاس‌پذیر.",
+    "article": "مقاله",
+    "readMore": "مطالعه مقاله",
+    "backToList": "مقالات بیشتر در فهرست بلاگ موجود است.",
+    "empty": "پس از انتشار مقالات از پنل ادمین، اینجا نمایش داده می‌شوند."
+  },
+  "contact": {
+    "title": "تماس",
+    "subtitle": "پروژه یا فرصت ریموت دارید؟ پیام بفرستید.",
+    "metaTitle": "تماس",
+    "metaDescription": "با مرتضی کمالیان برای فرصت‌های ریموت، پروژه‌های بک‌اند و همکاری فول‌استک در تماس باشید.",
+    "name": "نام",
+    "email": "ایمیل",
+    "subject": "موضوع",
+    "message": "پیام",
+    "send": "ارسال پیام",
+    "sending": "در حال ارسال...",
+    "success": "پیام با موفقیت ارسال شد. به زودی پاسخ می‌دهم.",
+    "error": "خطایی رخ داد. لطفاً دوباره تلاش کنید.",
+    "alternativesTitle": "راه‌های دیگر ارتباط",
+    "alternativesSubtitle": "ترجیح می‌دهید مستقیم پیام بدهید؟ از گزینه‌های زیر استفاده کنید.",
+    "emailLabel": "ایمیل",
+    "githubLabel": "گیت‌هاب",
+    "linkedinLabel": "لینکدین"
+  },
+  "footer": {
+    "builtWith": "ساخته شده با Django REST Framework و Next.js",
+    "rights": "تمامی حقوق محفوظ است.",
+    "connect": "ارتباط"
+  },
+  "language": {
+    "en": "English",
+    "fa": "فارسی",
+    "switcher": "زبان",
+    "enShort": "EN",
+    "faShort": "FA"
+  },
+  "theme": {
+    "label": "تم",
+    "switchToLight": "تغییر به حالت روشن",
+    "switchToDark": "تغییر به حالت تیره"
+  },
+  "a11y": {
+    "skipToContent": "رفتن به محتوای اصلی",
+    "openMenu": "باز کردن منو",
+    "closeMenu": "بستن منو",
+    "closeOverlay": "بستن پوشش منو",
+    "menuDialog": "ناوبری موبایل"
+  },
+  "errors": {
+    "notFoundTitle": "صفحه پیدا نشد",
+    "notFoundDescription": "صفحه‌ای که دنبال آن هستید وجود ندارد یا جابه‌جا شده است.",
+    "notFoundCta": "بازگشت به خانه",
+    "errorTitle": "خطایی رخ داد",
+    "errorDescription": "مشکلی پیش آمد. لطفاً دوباره تلاش کنید.",
+    "errorRetry": "تلاش مجدد",
+    "loading": "در حال بارگذاری..."
+  },
+  "common": {
+    "proficiency": "تسلط"
+  }
+}

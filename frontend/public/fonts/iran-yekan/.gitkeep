@@ -1,0 +1,9 @@
+Place your Iran Yekan variable font file here:
+
+  IRANYekanXVF.woff2
+
+Expected path:
+  frontend/public/fonts/iran-yekan/IRANYekanXVF.woff2
+
+If your file has a different name, update:
+  frontend/src/lib/fonts.ts

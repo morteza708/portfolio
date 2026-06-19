@@ -248,7 +248,11 @@ portfolio/
 
 ---
 
-## Deployment Checklist (Phase 4)
+## Deployment
+
+Production deploy guide for **Runflare**: [docs/RUNFLARE.md](docs/RUNFLARE.md)
+
+### Deployment Checklist (Phase 4)
 
 - [ ] Create production `.env` on the server (never commit secrets)
 - [ ] Set `DEBUG=0` and `DJANGO_SETTINGS_MODULE=config.settings.production`

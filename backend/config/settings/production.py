@@ -5,7 +5,9 @@ from .base import *  # noqa: F403
 DEBUG = False
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-SECURE_SSL_REDIRECT = True
+# Runflare/nginx terminates TLS at the edge. Enabling this without a trusted
+# X-Forwarded-Proto header causes infinite 301 loops on every API/admin URL.
+SECURE_SSL_REDIRECT = os.environ.get("SECURE_SSL_REDIRECT", "0") == "1"
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 SECURE_HSTS_SECONDS = 31536000

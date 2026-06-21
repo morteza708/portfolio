@@ -1,9 +1,41 @@
 from datetime import date
 
 from django.core.management.base import BaseCommand
+from django.db.models.signals import post_delete, post_save
 from django.utils import timezone
 
 from apps.core.models import Article, Certification, Education, Experience, Profile, Project, Skill
+from apps.core.signals import (
+    article_deleted,
+    article_saved,
+    certification_deleted,
+    certification_saved,
+    education_deleted,
+    education_saved,
+    experience_deleted,
+    experience_saved,
+    profile_saved,
+    project_deleted,
+    project_saved,
+    skill_deleted,
+    skill_saved,
+)
+
+SIGNAL_HANDLERS = (
+    (post_save, profile_saved, Profile),
+    (post_save, skill_saved, Skill),
+    (post_delete, skill_deleted, Skill),
+    (post_save, experience_saved, Experience),
+    (post_delete, experience_deleted, Experience),
+    (post_save, education_saved, Education),
+    (post_delete, education_deleted, Education),
+    (post_save, certification_saved, Certification),
+    (post_delete, certification_deleted, Certification),
+    (post_save, project_saved, Project),
+    (post_delete, project_deleted, Project),
+    (post_save, article_saved, Article),
+    (post_delete, article_deleted, Article),
+)
 
 PROJECT_GROUP_ID = "b2c3d4e5-f6a7-8901-bcde-f23456789012"
 ARTICLE_GROUP_ID = "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
@@ -59,6 +91,16 @@ class Command(BaseCommand):
     help = "Seed bilingual profile, skills, career data, projects, and articles"
 
     def handle(self, *args, **options):
+        for signal, handler, sender in SIGNAL_HANDLERS:
+            signal.disconnect(handler, sender=sender)
+
+        try:
+            self._seed()
+        finally:
+            for signal, handler, sender in SIGNAL_HANDLERS:
+                signal.connect(handler, sender=sender)
+
+    def _seed(self):
         profiles = [
             {
                 "language": "en",

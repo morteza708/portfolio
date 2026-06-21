@@ -27,6 +27,10 @@ function toMediaPath(path: string): string | undefined {
     mediaPath = `/${mediaPath}`;
   }
 
+  if (mediaPath.startsWith("/django-media/")) {
+    mediaPath = mediaPath.replace("/django-media/", "/media/");
+  }
+
   if (!mediaPath.startsWith("/media/")) {
     return undefined;
   }

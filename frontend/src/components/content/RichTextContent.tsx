@@ -48,7 +48,7 @@ function fixMediaUrls(html: string): string {
   return html.replace(
     /(src=["'])([^"']+)(["'])/gi,
     (_match, prefix: string, url: string, suffix: string) => {
-      if (!url.includes("/media/")) {
+      if (!url.includes("/media/") && !url.includes("/django-media/")) {
         return `${prefix}${url}${suffix}`;
       }
 

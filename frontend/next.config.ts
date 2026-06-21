@@ -71,7 +71,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/media/:path*",
-        destination: `${apiOrigin}/media/:path*`,
+        destination: `${apiOrigin}/django-media/:path*`,
       },
     ];
   },

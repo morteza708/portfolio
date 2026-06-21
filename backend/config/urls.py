@@ -12,10 +12,18 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 else:
+    media_prefix = settings.MEDIA_URL.lstrip("/")
+    static_prefix = settings.STATIC_URL.lstrip("/")
     urlpatterns += [
         re_path(
-            r"^media/(?P<path>.*)$",
+            rf"^{static_prefix}(?P<path>.*)$",
+            serve,
+            {"document_root": settings.STATIC_ROOT},
+        ),
+        re_path(
+            rf"^{media_prefix}(?P<path>.*)$",
             serve,
             {"document_root": settings.MEDIA_ROOT},
         ),

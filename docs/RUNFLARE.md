@@ -122,7 +122,7 @@ Or: Runflare panel → مشاهده لاگ
 | `POSTGRES_DB` | from DB service |
 | `POSTGRES_USER` | `postgres` |
 | `POSTGRES_PASSWORD` | Secret → DB secret |
-| `REDIS_URL` | `redis://:PASSWORD@redis-sqd-service:6379/0` |
+| `REDIS_URL` | Secret → copy full URL from Redis service (e.g. `redis://:PASSWORD@redis-sqd-service:6379/0`) |
 | `CORS_ALLOWED_ORIGINS` | `https://kamalian.dev,https://www.kamalian.dev` |
 | `FRONTEND_REVALIDATE_URL` | `https://kamalian.dev/api/revalidate` |
 | `SECRET_KEY` | Secret |
@@ -143,12 +143,32 @@ Or: Runflare panel → مشاهده لاگ
 
 | Issue | Fix |
 |-------|-----|
-| Admin has no CSS | Run `collectstatic` in backend startup command |
-| Images 404 | Check `/app/media` disk is attached to backend |
+| `api.kamalian.dev` SSL warning in browser | Certificate is not Let's Encrypt yet. In Runflare: backend service → Domains → remove and re-add `api.kamalian.dev`, enable SSL, wait 5–15 min. Issuer should be Let's Encrypt, not `cert-manager.local`. |
+| API/admin infinite 301 redirect | Keep `SECURE_SSL_REDIRECT` unset (default off). Redeploy backend after pulling latest code. |
+| `seed_data` Redis auth error | Copy exact `REDIS_URL` from Redis service → Connection / Secret tab. Format: `redis://:PASSWORD@redis-sqd-service:6379/0` (note the colon before password, no username). Restart backend after updating env. |
+| Admin / DRF UI has no CSS | Runflare blocks `/static/` — we use `/django-static/`. After deploy, verify: `curl -I https://api.kamalian.dev/django-static/admin/css/base.css` → **200**. Do **not** run gunicorn manually in Terminal (port 8000 is already in use); redeploy from CLI instead. |
+| Images 404 | Runflare nginx blocks `/media/` too. Backend serves `/django-media/`; frontend proxies `/media/` → API. Check `/app/media` disk is attached. |
 | CORS error | Verify `CORS_ALLOWED_ORIGINS` includes `https://kamalian.dev` |
 | CSRF on admin | Add `CSRF_TRUSTED_ORIGINS=https://api.kamalian.dev` |
 | Frontend build fails | Check Runflare logs; ensure Node 22 selected |
 | DB connection error | Verify `POSTGRES_HOST` matches Networks tab service name |
+| Frontend shows fallback text only | API unreachable — fix SSL + redirect loop, then run `seed_data` |
+
+### Verify Redis from backend terminal
+
+```bash
+python manage.py shell -c "from django.core.cache import cache; cache.set('ping', 'ok', 10); print(cache.get('ping'))"
+```
+
+Expected output: `ok`
+
+### Verify SSL certificate
+
+```bash
+echo | openssl s_client -connect api.kamalian.dev:443 -servername api.kamalian.dev 2>/dev/null | openssl x509 -noout -issuer -subject
+```
+
+Expected issuer contains `Let's Encrypt`, not `cert-manager.local`.
 
 ## Redeploy after code changes
 

@@ -16,6 +16,12 @@ COPY . .
 
 RUN chmod +x entrypoint.sh
 
+# Bake admin/DRF static assets into the image (Runflare nginx blocks /static/).
+ENV DJANGO_SETTINGS_MODULE=config.settings.production
+ENV SECRET_KEY=collectstatic-build-only
+ENV ALLOWED_HOSTS=localhost
+RUN python manage.py collectstatic --noinput
+
 EXPOSE 8000
 
 ENTRYPOINT ["./entrypoint.sh"]

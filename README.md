@@ -272,8 +272,9 @@ Production deploy guide for **Runflare**: [docs/RUNFLARE.md](docs/RUNFLARE.md)
 - [x] Phase 2 — Blog, admin content, SEO metadata
 - [x] Phase 3 — ISR, Redis cache, image pipeline
 - [x] About page redesign — career timeline, education, certifications
-- [ ] Phase 4 — Production deploy + analytics
-- [ ] Phase 5 — `sitemap.xml`, `robots.txt`, hire-me page
+- [x] Phase 4 — Production deploy (Runflare) — see [docs/RUNFLARE.md](docs/RUNFLARE.md)
+- [ ] Phase 5 — Analytics, Search Console, hire-me page
+- [x] Phase 5 (partial) — `sitemap.xml`, `robots.txt`
 
 ---
 
@@ -398,8 +399,9 @@ POST /api/v1/contact/
 - [x] فاز ۲ — بلاگ، ادمین، SEO
 - [x] فاز ۳ — ISR، کش Redis، تصاویر
 - [x] بازطراحی صفحه درباره من
-- [ ] فاز ۴ — deploy تولید
-- [ ] فاز ۵ — sitemap، robots، صفحه hire-me
+- [x] فاز ۴ — deploy تولید (Runflare) — [docs/RUNFLARE.md](docs/RUNFLARE.md)
+- [ ] فاز ۵ — analytics، Search Console، صفحه hire-me
+- [x] فاز ۵ (بخشی) — `sitemap.xml`، `robots.txt`
 
 ---
 

@@ -38,6 +38,7 @@ SIGNAL_HANDLERS = (
 )
 
 PROJECT_GROUP_ID = "b2c3d4e5-f6a7-8901-bcde-f23456789012"
+LEVELHAFT_GROUP_ID = "c3d4e5f6-a7b8-9012-cdef-345678901234"
 ARTICLE_GROUP_ID = "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
 
 PROJECT_DESCRIPTION_EN = (
@@ -59,6 +60,32 @@ PROJECT_DESCRIPTION_FA = (
     "<li>API با Django REST Framework و کش Redis</li>"
     "<li>فرانت‌اند Next.js با ISR و revalidation درخواستی</li>"
     "<li>PostgreSQL، Docker Compose و معماری آماده Nginx</li>"
+    "</ul>"
+)
+
+LEVELHAFT_DESCRIPTION_EN = (
+    "<p>Production Persian skincare e-commerce platform for the Iranian market — "
+    "catalog, checkout, payments, and admin workflows on levelhaft.com.</p>"
+    "<h3>Highlights</h3>"
+    "<ul>"
+    "<li>Phone OTP authentication (Kavenegar) with beautician tier pricing</li>"
+    "<li>Session cart, order lifecycle, Pasargad gateway, and wallet split payments</li>"
+    "<li>Business discount codes with admin analytics and Excel export</li>"
+    "<li>Workshop registration, blog CMS, Jalali calendar, and SEO sitemap</li>"
+    "<li>Deployed on Liara with PostgreSQL, WhiteNoise, and Gunicorn</li>"
+    "</ul>"
+)
+
+LEVELHAFT_DESCRIPTION_FA = (
+    "<p>پلتفرم production فروش آنلاین محصولات مراقبت پوست برای بازار ایران — "
+    "کاتالوگ، پرداخت، و جریان‌های مدیریتی روی levelhaft.com.</p>"
+    "<h3>ویژگی‌ها</h3>"
+    "<ul>"
+    "<li>ورود با OTP موبایل (کاوه‌نگار) و قیمت‌گذاری دو سطحی برای بیوتیشن‌ها</li>"
+    "<li>سبد خرید session-based، مدیریت سفارش، درگاه پاسارگاد و پرداخت ترکیبی کیف پول</li>"
+    "<li>کدهای تخفیف بیزنس با گزارش‌گیری ادمین و خروجی Excel</li>"
+    "<li>ثبت‌نام کارگاه، بلاگ، تقویم جلالی و sitemap برای SEO</li>"
+    "<li>استقرار روی لیارا با PostgreSQL، WhiteNoise و Gunicorn</li>"
     "</ul>"
 )
 
@@ -281,6 +308,50 @@ class Command(BaseCommand):
                 "is_featured": True,
                 "order": 1,
                 "translation_group_id": PROJECT_GROUP_ID,
+            },
+            {
+                "language": "en",
+                "slug": "levelhaft",
+                "title": "LevelHaft Skincare E-commerce",
+                "summary": "Production Persian e-commerce for skincare with OTP auth, dual-tier pricing, Pasargad payments, wallet, and business discounts.",
+                "description": LEVELHAFT_DESCRIPTION_EN,
+                "tech_stack": [
+                    "Django",
+                    "PostgreSQL",
+                    "Bootstrap 5",
+                    "Kavenegar",
+                    "Pasargad PEP",
+                    "WhiteNoise",
+                    "Gunicorn",
+                    "Liara",
+                ],
+                "live_url": "https://levelhaft.com",
+                "repo_url": "https://github.com/morteza708/levelhaft",
+                "is_featured": True,
+                "order": 2,
+                "translation_group_id": LEVELHAFT_GROUP_ID,
+            },
+            {
+                "language": "fa",
+                "slug": "levelhaft",
+                "title": "فروشگاه آنلاین لول هفت",
+                "summary": "فروشگاه production فارسی محصولات مراقبت پوست با OTP، قیمت‌گذاری بیوتیشن، درگاه پاسارگاد، کیف پول و تخفیف بیزنس.",
+                "description": LEVELHAFT_DESCRIPTION_FA,
+                "tech_stack": [
+                    "Django",
+                    "PostgreSQL",
+                    "Bootstrap 5",
+                    "Kavenegar",
+                    "Pasargad PEP",
+                    "WhiteNoise",
+                    "Gunicorn",
+                    "Liara",
+                ],
+                "live_url": "https://levelhaft.com",
+                "repo_url": "https://github.com/morteza708/levelhaft",
+                "is_featured": True,
+                "order": 2,
+                "translation_group_id": LEVELHAFT_GROUP_ID,
             },
         ]
 

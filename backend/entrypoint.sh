@@ -20,4 +20,9 @@ echo "PostgreSQL is ready."
 python manage.py migrate --noinput
 python manage.py collectstatic --noinput
 
+if [ ! -f staticfiles/admin/css/base.css ]; then
+  echo "ERROR: collectstatic did not produce admin CSS — aborting startup."
+  exit 1
+fi
+
 exec "$@"

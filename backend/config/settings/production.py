@@ -28,6 +28,10 @@ STORAGES = {
         "BACKEND": "django.core.files.storage.FileSystemStorage",
     },
     "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
+        # Plain storage keeps filenames stable for /django-static/ + serve().
+        # WhiteNoise middleware handles gzip at request time.
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
     },
 }
+
+WHITENOISE_SKIP_COMPRESS_EXTENSIONS = ("jpg", "jpeg", "png", "gif", "webp", "zip", "gz", "br")

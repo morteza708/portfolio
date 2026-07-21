@@ -380,7 +380,7 @@ curl -I https://{DOMAIN}/fa
 | 5 | Redis `AuthenticationError` | Copy exact `REDIS_URL` from Redis secret (`redis://:PASS@host:6379/0`) |
 | 6 | `seed_data` fails on Redis | Fix Redis URL; or disconnect cache signals during seed |
 | 7 | `Address already in use :8000` | Don't start Gunicorn in Terminal; redeploy via CLI |
-| 8 | Admin works but no CSS | `collectstatic` + deploy url fix; verify curl 200 on css |
+| 8 | Admin works but no CSS | Run `collectstatic` in Terminal; verify curl 200. Redeploy if startup skipped it |
 | 9 | Frontend shows fallback text | API unreachable — fix SSL/redirect first |
 | 10 | No static disk needed | Only `/app/media` disk for uploads |
 
@@ -392,7 +392,7 @@ curl -I https://{DOMAIN}/fa
 |---------|--------------|-----|
 | SSL warning in Firefox | Self-signed / cert-manager cert | Re-issue SSL; contact support |
 | 301 loop on API | `SECURE_SSL_REDIRECT=True` | Unset env; redeploy backend |
-| Admin unstyled | Static 404 | See gotchas #1, #8 |
+| Admin unstyled | `/app/staticfiles` empty after deploy | Terminal: `python manage.py collectstatic --noinput`. Verify curl 200 on `/django-static/admin/css/base.css`. **Not caused by `seed_data`.** |
 | Images 404 | Media path or missing disk | Disk `/app/media`; `/django-media/` path |
 | CORS error in browser | Wrong origins | `CORS_ALLOWED_ORIGINS=https://{DOMAIN}` |
 | CSRF error on admin login | Missing trusted origin | `CSRF_TRUSTED_ORIGINS=https://{API_DOMAIN}` |
